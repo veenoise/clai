@@ -4,7 +4,7 @@ function Navigation() {
 	const [activeItem, setActiveItem] = useState(true)
 	return (
 		<>
-			<nav className='pt-2'>
+			<nav className='py-2'>
 				<ul className="d-flex justify-content-center navbar-nav-custom gap-2" id="nav-ul">
 					<li className="nav-item-custom px-3 py-2">
 						<a href="#about" className={`nav-link-custom ${activeItem ? 'active':''}`} onClick={() => setActiveItem(a => a = true)}>about her</a>	
