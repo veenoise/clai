@@ -1,0 +1,159 @@
+:root {
+  --font-black: #242424;
+  --background-white: #f4f4f4;
+  --pink: #ff8a8a;
+  --pink-light: #ffdddd;
+}
+
+body {
+  background-color: var(--background-white);
+  color: var(--font-black);
+}
+/* 
+* {
+  border: solid red 1px;
+} */
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.nav-item-custom {
+  list-style-type: none;
+  border-radius: 10%;
+  transition: background-color .5s ease;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-link-custom {
+  text-decoration: none;
+  color: var(--font-black);
+}
+
+.nav-item-custom:hover {
+  background-color: var(--font-black);
+  a {
+    color: var(--pink);
+    font-weight: bold;
+  }
+  
+}
+
+.navbar-nav-custom {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: rgba(244, 244, 244, .8);
+}
+
+.full-vh {
+  height: 100vh;
+}
+
+.scrollable {
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+
+#sidepanel {
+  width: 126px;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+}
+
+textarea {
+  resize: none;
+}
+img {
+  object-fit: cover;
+}
+
+#sidepanel-picture {
+  transform: rotate(30deg);
+  margin-left: -40%;
+  animation: peek 10s infinite ease;
+}
+
+@keyframes peek {
+  0% {
+    transform: translateX(-128px) rotate(0deg);
+  }
+  3% {
+    transform: translateX(-128px) rotate(0deg);
+  }
+  6% {
+    transform: translateX(0) rotate(30deg);
+  }
+  97% {
+    transform: translateX(0) rotate(30deg);
+  }
+  100% {
+    transform: translateX(-128px) rotate(0deg);
+  }
+}
+
+#contact-form {
+  max-width: 500px;
+  background-color: var(--pink-light);
+}
+
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--background-white);
+  --bs-btn-bg: var(--pink);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--pink);
+  --bs-btn-hover-bg: var(--font-black);
+  --bs-btn-hover-border-color: var(--pink);
+  --bs-btn-focus-shadow-rgb: var(--pink);
+  --bs-btn-active-color: var(--font-black);
+  --bs-btn-active-bg: var(--pink);
+  --bs-btn-active-border-color: var(--font-black);
+}
+
+@media (width > 768px) {
+  #clai-hero {
+    height: 480px;
+  }
+
+  #nav-ul {
+    flex-direction: column;
+    align-items: end;
+    border-right: solid var(--font-black) 4px;
+  }
+
+  .nav-item-custom {
+    border-radius: 10% 0 0 10%;
+  }
+
+  nav {
+    width: auto;
+    bottom: 2%;
+    top: auto;
+    right: 2%;
+  }
+
+  #educ {
+    margin-top: -100vh;
+  }
+
+  .max-w {
+    max-width: calc(100vw - (2 * 126px));
+  }
+}
